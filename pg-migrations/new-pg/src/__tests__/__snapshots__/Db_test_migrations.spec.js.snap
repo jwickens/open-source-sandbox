@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`using pg to test migrations after migration the table and columns match 1`] = `
+Object {
+  "functions": Array [
+    "js_time(timestamp with time zone)",
+  ],
+  "tables": Object {
+    "test": Array [
+      Object {
+        "arrayDataType": null,
+        "camelName": "id",
+        "columnName": "id",
+        "dataType": "integer",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "testName",
+        "columnName": "test_name",
+        "dataType": "text",
+      },
+      Object {
+        "arrayDataType": "text",
+        "camelName": "tags",
+        "columnName": "tags",
+        "dataType": "ARRAY",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "message",
+        "columnName": "message",
+        "dataType": "text",
+      },
+    ],
+    "version": Array [
+      Object {
+        "arrayDataType": null,
+        "camelName": "version",
+        "columnName": "version",
+        "dataType": "numeric",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "deployStart",
+        "columnName": "deploy_start",
+        "dataType": "timestamp with time zone",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "deployedTs",
+        "columnName": "deployed_ts",
+        "dataType": "timestamp with time zone",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "clientCount",
+        "columnName": "client_count",
+        "dataType": "integer",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "payload",
+        "columnName": "payload",
+        "dataType": "jsonb",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "payloadVersion",
+        "columnName": "payload_version",
+        "dataType": "numeric",
+      },
+    ],
+  },
+}
+`;
+
+exports[`using pg to test migrations before migration the table and columns dont match 1`] = `
+Object {
+  "functions": Array [
+    "js_time(timestamp with time zone)",
+  ],
+  "tables": Object {
+    "test": Array [
+      Object {
+        "arrayDataType": null,
+        "camelName": "id",
+        "columnName": "id",
+        "dataType": "integer",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "testName",
+        "columnName": "test_name",
+        "dataType": "text",
+      },
+    ],
+    "version": Array [
+      Object {
+        "arrayDataType": null,
+        "camelName": "version",
+        "columnName": "version",
+        "dataType": "numeric",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "deployStart",
+        "columnName": "deploy_start",
+        "dataType": "timestamp with time zone",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "deployedTs",
+        "columnName": "deployed_ts",
+        "dataType": "timestamp with time zone",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "clientCount",
+        "columnName": "client_count",
+        "dataType": "integer",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "payload",
+        "columnName": "payload",
+        "dataType": "jsonb",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "payloadVersion",
+        "columnName": "payload_version",
+        "dataType": "numeric",
+      },
+    ],
+  },
+}
+`;
+
+exports[`using pg to test migrations before migration the table and columns dont match 2`] = `
+Object {
+  "functions": Array [
+    "js_time(timestamp with time zone)",
+  ],
+  "tables": Object {
+    "test": Array [
+      Object {
+        "arrayDataType": null,
+        "camelName": "id",
+        "columnName": "id",
+        "dataType": "integer",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "testName",
+        "columnName": "test_name",
+        "dataType": "text",
+      },
+      Object {
+        "arrayDataType": "text",
+        "camelName": "tags",
+        "columnName": "tags",
+        "dataType": "ARRAY",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "message",
+        "columnName": "message",
+        "dataType": "text",
+      },
+    ],
+    "version": Array [
+      Object {
+        "arrayDataType": null,
+        "camelName": "version",
+        "columnName": "version",
+        "dataType": "numeric",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "deployStart",
+        "columnName": "deploy_start",
+        "dataType": "timestamp with time zone",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "deployedTs",
+        "columnName": "deployed_ts",
+        "dataType": "timestamp with time zone",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "clientCount",
+        "columnName": "client_count",
+        "dataType": "integer",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "payload",
+        "columnName": "payload",
+        "dataType": "jsonb",
+      },
+      Object {
+        "arrayDataType": null,
+        "camelName": "payloadVersion",
+        "columnName": "payload_version",
+        "dataType": "numeric",
+      },
+    ],
+  },
+}
+`;

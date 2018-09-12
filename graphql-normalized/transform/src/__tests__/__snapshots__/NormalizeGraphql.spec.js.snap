@@ -1,0 +1,516 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`normalize can normalize 1`] = `
+Object {
+  "graphqlData": Object {
+    "Conversation": Object {
+      "1": Object {
+        "__typename": "Conversation",
+        "botConversationMode": "unsupervised",
+        "currentConsumerChannel": null,
+        "description": "customer: test context generated message 9 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        "escalationReason": null,
+        "id": "1",
+        "lastEngagedAgentOrBot": "4",
+        "lastEngagedCustomer": "2",
+        "lastEngagedProfile": "2",
+        "lastUpdated": null,
+        "participants": Array [
+          "2",
+          "4",
+        ],
+        "sectionCount": 10,
+        "topic": null,
+        "updateCount": 41,
+        "updates": Object {
+          "__typename": "UpdateConnection",
+          "edges": Array [
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMSIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "1",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMiIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "2",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMyIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "3",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiNCIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "4",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiNSIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "5",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiNiIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "6",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiNyIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "7",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiOCIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "8",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiOSIsImYiOiJpZCIsImQiOmZhbHNlfV0sImYiOlt7InYiOlsiMSJdLCJmIjoiY29udmVyc2F0aW9uX2lkIn1dLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "9",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTAiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "10",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTEiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "11",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTIiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "12",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTMiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "13",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTQiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "14",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTUiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "15",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTYiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "16",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTciLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "17",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTgiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "18",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMTkiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "19",
+            },
+            Object {
+              "__typename": "UpdateEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiMjAiLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbeyJ2IjpbIjEiXSwiZiI6ImNvbnZlcnNhdGlvbl9pZCJ9XSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+              "node": "20",
+            },
+          ],
+          "pageInfo": Object {
+            "hasNextPage": true,
+            "hasPrevPage": false,
+          },
+        },
+      },
+    },
+    "Profile": Object {
+      "2": Object {
+        "__typename": "Profile",
+        "avatarUrl": null,
+        "id": "2",
+        "nickname": "Mr. Dimitri Lebsack",
+        "profileType": "customer",
+      },
+      "4": Object {
+        "__typename": "Profile",
+        "avatarUrl": null,
+        "id": "4",
+        "nickname": "Mrs. Arvel Doyle",
+        "profileType": "agent",
+      },
+    },
+    "Update": Object {
+      "1": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.297Z",
+        "id": "1",
+        "message": Object {
+          "text": "test context first message",
+        },
+        "organization": null,
+        "sectionSeq": 0,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 0,
+        "tentative": false,
+      },
+      "10": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.797Z",
+        "id": "10",
+        "message": Object {
+          "text": "test context generated message 2-0 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 2,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 9,
+        "tentative": false,
+      },
+      "11": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.846Z",
+        "id": "11",
+        "message": Object {
+          "text": "test context generated message 2-1 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 2,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 10,
+        "tentative": false,
+      },
+      "12": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.902Z",
+        "id": "12",
+        "message": Object {
+          "text": "test context generated message 2-2 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 2,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 11,
+        "tentative": false,
+      },
+      "13": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.949Z",
+        "id": "13",
+        "message": Object {
+          "text": "test context generated message 2-3 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 2,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 12,
+        "tentative": false,
+      },
+      "14": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.996Z",
+        "id": "14",
+        "message": Object {
+          "text": "test context generated message 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 3,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 13,
+        "tentative": false,
+      },
+      "15": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:27.047Z",
+        "id": "15",
+        "message": Object {
+          "text": "test context generated message 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 3,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 14,
+        "tentative": false,
+      },
+      "16": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:27.101Z",
+        "id": "16",
+        "message": Object {
+          "text": "test context generated message 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 3,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 15,
+        "tentative": false,
+      },
+      "17": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:27.167Z",
+        "id": "17",
+        "message": Object {
+          "text": "test context generated message 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 3,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 16,
+        "tentative": false,
+      },
+      "18": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:27.221Z",
+        "id": "18",
+        "message": Object {
+          "text": "test context generated message 4-0 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 4,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 17,
+        "tentative": false,
+      },
+      "19": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:27.282Z",
+        "id": "19",
+        "message": Object {
+          "text": "test context generated message 4-1 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 4,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 18,
+        "tentative": false,
+      },
+      "2": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.355Z",
+        "id": "2",
+        "message": Object {
+          "text": "test context generated message 0-0 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 0,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 1,
+        "tentative": false,
+      },
+      "20": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:27.341Z",
+        "id": "20",
+        "message": Object {
+          "text": "test context generated message 4-2 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 4,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 19,
+        "tentative": false,
+      },
+      "3": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.408Z",
+        "id": "3",
+        "message": Object {
+          "text": "test context generated message 0-1 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 0,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 2,
+        "tentative": false,
+      },
+      "4": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.463Z",
+        "id": "4",
+        "message": Object {
+          "text": "test context generated message 0-2 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 0,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 3,
+        "tentative": false,
+      },
+      "5": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.519Z",
+        "id": "5",
+        "message": Object {
+          "text": "test context generated message 0-3 Praesent dignissim tempor nunc, non egestas augue tincidunt vel.",
+        },
+        "organization": null,
+        "sectionSeq": 0,
+        "sender": "4",
+        "sentAs": "4",
+        "seq": 4,
+        "tentative": false,
+      },
+      "6": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.584Z",
+        "id": "6",
+        "message": Object {
+          "text": "test context generated message 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 1,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 5,
+        "tentative": false,
+      },
+      "7": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.637Z",
+        "id": "7",
+        "message": Object {
+          "text": "test context generated message 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 1,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 6,
+        "tentative": false,
+      },
+      "8": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.692Z",
+        "id": "8",
+        "message": Object {
+          "text": "test context generated message 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 1,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 7,
+        "tentative": false,
+      },
+      "9": Object {
+        "__typename": "Update",
+        "conversation": Object {
+          "id": "1",
+        },
+        "createdAt": "2018-01-12T07:54:26.745Z",
+        "id": "9",
+        "message": Object {
+          "text": "test context generated message 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae tincidunt libero, fringilla tempor magna.",
+        },
+        "organization": null,
+        "sectionSeq": 1,
+        "sender": "2",
+        "sentAs": "2",
+        "seq": 8,
+        "tentative": false,
+      },
+    },
+  },
+  "result": Object {
+    "data": Object {
+      "chat": Object {
+        "allConversations": Object {
+          "__typename": "ConversationConnection",
+          "edges": Array [
+            Object {
+              "__typename": "ConversationEdge",
+              "cursor": "eyJzIjpbeyJ2IjoiNDIiLCJmIjoidXBkYXRlX3NlcSIsImQiOmZhbHNlfV0sImYiOltdLCJ3IjpbXSwiaSI6W10sIm4iOltdfQ==",
+              "node": "1",
+            },
+          ],
+          "pageInfo": Object {
+            "hasNextPage": false,
+            "hasPrevPage": false,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table __insertSql generates sensible sql 1`] = `
+"
+      insert into test as d (tags)
+      values (Array['a-tag']::text[])
+    "
+`;
+
+exports[`Table __updateSql generates sensible sql 1`] = `
+"
+        set tags = COALESCE(Array['a-tag']::text[], tags)
+        where d.id = '1'
+      "
+`;

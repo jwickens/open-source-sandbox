@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keyset can get a paginated list (basic) 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJzIjpbeyJ2IjoxLCJmIjoiaWQiLCJkIjpmYWxzZX1dLCJmIjpbXSwidyI6W10sImkiOltdLCJuIjpbXX0=",
+      "node": Object {
+        "id": 1,
+        "message": "these messages have a default",
+        "tags": Array [
+          "a",
+        ],
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "hasNextPage": true,
+    "hasPrevPage": false,
+    "totalCount": 463,
+  },
+}
+`;
+
+exports[`Keyset can get a paginated list (basic) 2`] = `
+"
+      SELECT id, tags, message
+      FROM test
+      WHERE test.id is not null
+      
+      ORDER BY test.id ASC
+      LIMIT 1
+    "
+`;
+
+exports[`Keyset can get a paginated list (basic) 3`] = `
+"Limit  (cost=0.28..0.36 rows=1 width=68)
+  ->  Index Scan using test_pkey on test  (cost=0.28..86.02 rows=1014 width=68)
+        Index Cond: (id IS NOT NULL)"
+`;
+
+exports[`Keyset can get a paginated list (search) 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJzIjpbeyJ2IjowLjIxMDUyNiwiZiI6Im1lc3NhZ2UiLCJkIjp0cnVlLCJxIjoiaGVsbCJ9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": anonymous {
+        "id": 427,
+        "message": "hello there c tags",
+        "sml": 0.210526,
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "hasNextPage": true,
+    "hasPrevPage": false,
+  },
+}
+`;
+
+exports[`Keyset can get a paginated list (search) 2`] = `
+"
+      SELECT id, tags, message, similarity(message, 'hell') as sml
+      FROM test
+      WHERE message is not null AND message like '%hell%'
+      ORDER BY similarity(message, 'hell') DESC
+      LIMIT 1
+    "
+`;
+
+exports[`Keyset can get a paginated list (search) 3`] = `
+"Limit  (cost=23.80..23.80 rows=1 width=72)
+  ->  Sort  (cost=23.80..23.82 rows=8 width=72)
+        Sort Key: (similarity(message, 'hell'::text)) DESC
+        ->  Seq Scan on test  (cost=0.00..23.76 rows=8 width=72)
+              Filter: ((message IS NOT NULL) AND (message ~~ '%hell%'::text))"
+`;
+
+exports[`Keyset can start from the end 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjMsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 463,
+        "message": "hello there c tags",
+        "tags": Array [
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjIsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 462,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjEsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 461,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjAsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 460,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTksImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 459,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTgsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 458,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTcsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 457,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTYsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 456,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTUsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 455,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTQsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 454,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "hasNextPage": true,
+    "hasPrevPage": false,
+    "totalCount": 463,
+  },
+}
+`;
+
+exports[`Keyset can start from the end 2`] = `
+"
+      SELECT id, tags, message
+      FROM test
+      WHERE test.id is not null
+      
+      ORDER BY test.id DESC
+      LIMIT 10
+    "
+`;
+
+exports[`Keyset can start from the end 3`] = `
+"Limit  (cost=0.28..1.12 rows=10 width=68)
+  ->  Index Scan Backward using test_pkey on test  (cost=0.28..86.02 rows=1014 width=68)
+        Index Cond: (id IS NOT NULL)"
+`;
+
+exports[`Keyset can use default last option 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjMsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 463,
+        "message": "hello there c tags",
+        "tags": Array [
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjIsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 462,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjEsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 461,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NjAsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 460,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTksImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 459,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTgsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 458,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTcsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 457,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTYsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 456,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTUsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 455,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTQsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 454,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTMsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 453,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTIsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 452,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTEsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 451,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NTAsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 450,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NDksImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 449,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NDgsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 448,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NDcsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 447,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NDYsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 446,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NDUsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 445,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+    Object {
+      "cursor": "eyJzIjpbeyJ2Ijo0NDQsImYiOiJpZCIsImQiOnRydWV9XSwiZiI6W10sInciOltdLCJpIjpbXSwibiI6W119",
+      "node": Object {
+        "id": 444,
+        "message": "hello there c tags",
+        "tags": Array [
+          "a",
+          "c",
+        ],
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "hasNextPage": true,
+    "hasPrevPage": false,
+    "totalCount": 463,
+  },
+}
+`;
+
+exports[`Keyset can use default last option 2`] = `
+"
+      SELECT id, tags, message
+      FROM test
+      WHERE test.id is not null
+      
+      ORDER BY test.id DESC
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can use default last option 3`] = `
+"Limit  (cost=0.28..1.97 rows=20 width=68)
+  ->  Index Scan Backward using test_pkey on test  (cost=0.28..86.02 rows=1014 width=68)
+        Index Cond: (id IS NOT NULL)"
+`;

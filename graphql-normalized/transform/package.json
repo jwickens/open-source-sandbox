@@ -1,0 +1,13 @@
+{
+  "name": "normalize-graphql",
+  "version": "0.0.0-52fd4d1c",
+  "license": "UNLICENSED",
+  "main": "lib",
+  "browser": "dist",
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "build": "yarn js-compile && yarn browser-compile"
+  },
+  "devDependencies": {
+  }
+}

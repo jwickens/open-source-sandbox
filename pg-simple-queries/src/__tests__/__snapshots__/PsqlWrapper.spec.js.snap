@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`psql wrapper can describe a table 1`] = `
+"Table \\"<schema_name>.test\\"
+Column|Type|Modifiers
+id|integer|not null default nextval('test_id_seq'::regclass)
+test_name|text|
+message|text|
+tags|text[]|
+Indexes:
+\\"test_pkey\\" PRIMARY KEY, btree (id)
+\\"trgm_idx\\" gin (message public.gin_trgm_ops)"
+`;

@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keyset can add a filter in to keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE id IN ('1','2','3')
+      
+      
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a filter intersect to keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE tags && ARRAY['b']
+      
+      
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a filter not null to keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE id IS NOT NULL
+      
+      
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a filter null to keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE id IS NULL
+      
+      
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a filter where to keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE id = '1'
+      
+      
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a raw where and order clauses to the keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE id is null
+      
+      ORDER BY id asc nulls last
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a seek to keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE test.id is not null AND test.id > '1'
+      
+      ORDER BY test.id ASC
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can add a seek with desc sort 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE test.id is not null AND test.id < '1'
+      
+      ORDER BY test.id DESC
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can convert a keyset into an opaque cursor and back (basic) 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE test.id is not null AND test.id < '1' AND id IS NULL
+      
+      ORDER BY test.id DESC
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can convert a keyset into an opaque cursor and back (search) 1`] = `"eyJzIjpbeyJ2IjowLCJmIjoiaWQiLCJkIjpmYWxzZSwicSI6Im15IHNlYXJjaCBxdWVyeSJ9XSwiZiI6W3sidiI6WzEsMl0sImYiOiJpZCJ9XSwidyI6W3sidiI6MSwiZiI6ImlkIn1dLCJpIjpbeyJ2IjpbImEiXSwiZiI6InRhZ3MifV0sIm4iOlt7ImYiOiJpZCIsIm4iOmZhbHNlfV19"`;
+
+exports[`Keyset can convert a keyset into an opaque cursor and back (search) 2`] = `
+"
+      SELECT similarity(test.id, 'my search query') as sml
+      FROM test
+      WHERE test.id is not null AND id like '%my search query%' AND similarity(test.id, 'my search query') > '0' AND id IN ('1','2') AND id = '1' AND tags && ARRAY['a'] AND id IS NOT NULL
+      
+      ORDER BY similarity(test.id, 'my search query') ASC
+      LIMIT 20
+    "
+`;
+
+exports[`Keyset can seek before keyset 1`] = `
+"
+      SELECT null
+      FROM test
+      WHERE test.id is not null AND test.id < '1'
+      
+      ORDER BY test.id ASC
+      LIMIT 20
+    "
+`;

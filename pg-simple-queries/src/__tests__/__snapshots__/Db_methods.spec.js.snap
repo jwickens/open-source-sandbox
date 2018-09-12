@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Db methods find() it can find data 1`] = `
+Array [
+  anonymous {
+    "id": 1,
+    "message": null,
+    "tags": Array [
+      "a",
+    ],
+    "testName": null,
+  },
+]
+`;
+
+exports[`Db methods one() it can get one row of data 1`] = `
+anonymous {
+  "id": 1,
+  "message": null,
+  "tags": Array [
+    "a",
+  ],
+  "testName": null,
+}
+`;
+
+exports[`Db methods query() it can query data 1`] = `Array []`;
